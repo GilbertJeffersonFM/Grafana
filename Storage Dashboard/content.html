@@ -1,0 +1,35 @@
+<div class="metrics-layout">
+  <!-- Top: Progress bar -->
+  <div class="progress-card">
+    <div class="progress-header">
+      <span class="progress-title">Disk Usage %</span>
+      <span class="progress-percent" id="disk-percent">-</span>
+    </div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" id="disk-bar" style="width: 0%;"></div>
+    </div>
+    <div class="progress-footer">
+      <span>0%</span>
+      <span>100%</span>
+    </div>
+  </div>
+
+  <!-- Bottom row -->
+  <div class="bottom-row">
+    <div class="stat-card" style="background-color: #5794f2;" data-metric="used">
+      <div class="stat-title">Disk Used</div>
+      <div class="stat-value">
+        <span class="value">-</span>
+        <span class="unit">GB</span>
+      </div>
+    </div>
+
+    <div class="stat-card" style="background-color: #73bf69;" data-metric="capacity">
+      <div class="stat-title">Disk Capacity</div>
+      <div class="stat-value">
+        <span class="value">-</span>
+        <span class="unit">GB</span>
+      </div>
+    </div>
+  </div>
+</div>

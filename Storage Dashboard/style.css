@@ -1,0 +1,150 @@
+& {
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 100% !important;
+  min-height: 100% !important;
+}
+
+& > div,
+& > div > div {
+  height: 100% !important;
+  min-height: 100% !important;
+}
+
+.metrics-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+/* ===== Top Progress Card ===== */
+.progress-card {
+  flex: 1.1;                        /* takes a bit more height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #2c3235;
+  border-radius: 4px;
+  padding: 16px 20px;
+  color: #e0e0e0;
+  box-sizing: border-box;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.progress-title {
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.progress-percent {
+  font-size: 24px;
+  font-weight: 600;
+  color: #73bf69;
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 16px;
+  background: #1e2224;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #73bf69, #96d98d);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+.progress-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  opacity: 0.55;
+}
+
+/* ===== Bottom row (2 cards) ===== */
+.bottom-row {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  min-height: 0;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+  padding: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.stat-title {
+  font-weight: 500;
+  opacity: 0.95;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.stat-value {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  line-height: 1;
+}
+
+.stat-value .value {
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.stat-value .unit {
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* Hide the unwanted search/filter box at the bottom */
+input[type="search"],
+input[placeholder*="Search"],
+.panel-content input,
+.css-1x5d3x8,          /* sometimes used by Grafana */
+[class*="filter"],
+[class*="search"] {
+  display: none !important;
+}
+
+/* Stronger hide for the bottom search box */
+.metrics-layout + input,
+.metrics-layout ~ input,
+textarea + input,
+.panel-content > input {
+  display: none !important;
+  height: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Hide Grafana/Business Text bottom filter/search */
+input {
+  display: none !important;
+}
