@@ -1,0 +1,16 @@
+For the panel to actually show a data, you need to put query under the query tab inside panel editor. make sure the query name is exactly as shown in this file.
+
+note : if the query is not returning any value, it will show as a "-" on the value.
+
+Query :
+1. Disk Usage Percentage :
+Query name : usage_pct
+Query : (sum(longhorn_disk_usage_bytes) / sum(longhorn_disk_capacity_bytes)) * 100
+
+2. Disk Used :
+Query name : used
+Query : sum(longhorn_disk_usage_bytes)
+
+3. Disk Capacity :
+Query name : capacity
+Query : sum(longhorn_disk_capacity_bytes)
